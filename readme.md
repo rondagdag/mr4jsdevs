@@ -1,7 +1,7 @@
 ## How to use
 
 ```bash
-npm install local-web-server -g
+npm install local-web-server --location=global
 ws
 ```
 
