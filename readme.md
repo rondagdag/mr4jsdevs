@@ -1,8 +1,8 @@
 ## How to use
 
 ```bash
-npm install local-web-server --location=global
-ws
+npm install local-web-server
+npx ws
 ```
 
 Install ngrok. https://ngrok.com/docs/getting-started
