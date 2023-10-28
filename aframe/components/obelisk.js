@@ -1,6 +1,5 @@
 AFRAME.registerComponent("obelisk", {
     schema: {
-        color: { default: "gray" },
         bottomModel: {},
         sphereImage: {},
         cubemap: {},
@@ -9,7 +8,7 @@ AFRAME.registerComponent("obelisk", {
 
         let bottom = document.createElement("a-entity")
         bottom.setAttribute("gltf-model", this.data.bottomModel)
-        bottom.setAttribute("scale", "2 2 2")
+        bottom.setAttribute("scale", "4 4 4")
 
         let top = document.createElement("a-entity")
         top.setAttribute("position", "0 1.25 0")
@@ -28,9 +27,6 @@ AFRAME.registerComponent("obelisk", {
 	    let material1 = new THREE.MeshLambertMaterial( { map: extTexture, opacity: 0.5 } );
 	    let extSphere = new THREE.Mesh( geo, material1 );
 
-        // let extSphere = new THREE.Mesh(geo,
-        //     new THREE.MeshStandardMaterial({ color: new THREE.Color(this.data.color) }))
-        //geo.dispose();
         extSphere.rotation.set(-Math.PI / 2, 0, 0)
         top.object3D.add(extSphere)
 
@@ -80,10 +76,10 @@ AFRAME.registerComponent("obelisk", {
         return Math.min(Math.max(theta, 0), Math.PI)
     },
     decreaseTheta(theta) {
-        if (theta > 0) return this.clampTheta(theta - 0.02);
+        if (theta > 0) return this.clampTheta(theta - 0.01);
     },
     increaseTheta(theta) {
-        if (theta < Math.PI) return this.clampTheta(theta + 0.02)
+        if (theta < Math.PI) return this.clampTheta(theta + 0.01)
     },
     tick: (function () {
 
