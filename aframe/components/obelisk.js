@@ -16,7 +16,7 @@ AFRAME.registerComponent("obelisk", {
         top.setAttribute("look-at",)
 
         /* Having trouble with removing vertices with a spherebuffergeometry...??? */
-        let geo = new THREE.SphereGeometry(1, 32, 32);
+        let geo = new THREE.SphereGeometry(1, 16, 16);
 
         let loader = new THREE.TextureLoader();
 	    let extTexture = loader.load( this.data.sphereImage, function ( texture ) {
@@ -74,7 +74,7 @@ AFRAME.registerComponent("obelisk", {
         this.faceCount = this.extSphere.geometry.attributes.position.count
     },
     getSphere(theta) {
-        return new THREE.SphereGeometry(1, 32, 32, 0, Math.PI * 2, 0, theta)
+        return new THREE.SphereGeometry(1, 16, 16, 0, Math.PI * 2, 0, theta)
     },
     clampTheta(theta) {
         return Math.min(Math.max(theta, 0), Math.PI)
