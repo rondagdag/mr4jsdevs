@@ -8,7 +8,8 @@ AFRAME.registerComponent("obelisk", {
 
         let bottom = document.createElement("a-entity")
         bottom.setAttribute("gltf-model", this.data.bottomModel)
-        bottom.setAttribute("scale", "4 4 4")
+        bottom.setAttribute("position", "0 0.5 0")
+        bottom.setAttribute("scale", "2 2 2")
 
         let top = document.createElement("a-entity")
         top.setAttribute("position", "0 1.25 0")

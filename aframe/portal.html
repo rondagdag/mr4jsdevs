@@ -3,13 +3,13 @@
 <script src="./components/obelisk.js"></script>
 
 <a-scene webxr="requiredFeatures: anchors,local-floor"
+inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"
 vr-mode-ui="enterAREnabled: true; enterVREnabled: false">
   <a-assets>
     <a-asset-item id="rubikscube" src="../rubiks_cube.glb"></a-asset-item>
   </a-assets>
-
   <!-- obelisks -->
-  <a-entity position="0 0 -1" obelisk="cubemap: assets/cubemaps/rubixcubeworld; bottomModel: #rubikscube; sphereImage: assets/moon_texture.jpg" freeze-workaround></a-entity>
+  <a-entity position="0 0 -1.5" obelisk="cubemap: assets/cubemaps/rubixcubeworld; bottomModel: #rubikscube; sphereImage: assets/moon_texture.jpg" freeze-workaround></a-entity>
   
   <!-- a rig for the entire "user" is required if. Otherwise I would have to meddle in the hand-tracking-controls afaik -->
   <!-- <a-entity id="rig">
