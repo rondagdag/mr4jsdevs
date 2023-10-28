@@ -1,12 +1,15 @@
 AFRAME.registerComponent("obelisk", {
     schema: {
         color: { default: "gray" },
+        bottomModel: {},
+        sphereImage: {},
         cubemap: {},
     },
     init: function () {
-        let bottom = document.createElement("a-box")
-        bottom.setAttribute("color", "gray")
-        bottom.setAttribute("scale", "1 0.25 1")
+
+        let bottom = document.createElement("a-entity")
+        bottom.setAttribute("gltf-model", this.data.bottomModel)
+        bottom.setAttribute("scale", "2 2 2")
 
         let top = document.createElement("a-entity")
         top.setAttribute("position", "0 1.25 0")
@@ -14,8 +17,19 @@ AFRAME.registerComponent("obelisk", {
 
         /* Having trouble with removing vertices with a spherebuffergeometry...??? */
         let geo = new THREE.SphereGeometry(1, 32, 32);
-        let extSphere = new THREE.Mesh(geo,
-            new THREE.MeshStandardMaterial({ color: new THREE.Color(this.data.color) }))
+
+        let loader = new THREE.TextureLoader();
+	    let extTexture = loader.load( this.data.sphereImage, function ( texture ) {
+            // in this example we create the material when the texture is loaded
+            const material = new THREE.MeshBasicMaterial( {
+                map: texture
+             } );
+        });
+	    let material1 = new THREE.MeshLambertMaterial( { map: extTexture, opacity: 0.5 } );
+	    let extSphere = new THREE.Mesh( geo, material1 );
+
+        // let extSphere = new THREE.Mesh(geo,
+        //     new THREE.MeshStandardMaterial({ color: new THREE.Color(this.data.color) }))
         //geo.dispose();
         extSphere.rotation.set(-Math.PI / 2, 0, 0)
         top.object3D.add(extSphere)
