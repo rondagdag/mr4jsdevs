@@ -1,0 +1,12 @@
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+<script src="./components/obelisk.js"></script>
+
+<a-scene 
+vr-mode-ui="enterAREnabled: true; enterVREnabled: false">
+  <a-assets>
+    <a-asset-item id="rubikscube" src="../rubiks_cube.glb"></a-asset-item>
+  </a-assets>
+  <!-- obelisks -->
+  <a-entity position="0 0 -1.5" obelisk="cubemap: assets/cubemaps/rubixcubeworld; bottomModel: #rubikscube; sphereImage: assets/moon_texture.jpg" freeze-workaround></a-entity>
+</a-scene>
