@@ -1,6 +1,7 @@
 {
   "name": "coconut-xr-app",
   "version": "0.1.0",
+  "homepage": "https://rondagdag.github.io/mr4jsdevs/coconut-xr/build",
   "private": true,
   "dependencies": {
     "@coconut-xr/koestlich": "^0.3.12",
