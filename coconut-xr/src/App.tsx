@@ -34,14 +34,14 @@ export default function Index() {
           rotation={[-Math.PI / 8, Math.PI / 8, 0, "YXZ"]}
         />
         <Grabbable>
-          <Gltf position-x={0.2} scale={0.01} src="Trex.glb" />
+          <Gltf position-x={0.2} scale={1} src="rubiks_cube.glb" />
         </Grabbable>
-        <Grabbable>
+        {/* <Grabbable>
           <Gltf scale={0.01} src="Triceratops.glb" />
         </Grabbable>
         <Grabbable>
           <Gltf position-x={-0.2} scale={0.01} src="Stegosaurus.glb" />
-        </Grabbable>
+        </Grabbable> */}
         <Hands type="grab" />
         <Controllers type="grab" />
       </XRCanvas>
