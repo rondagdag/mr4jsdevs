@@ -1,0 +1,8 @@
+import * as __wonderlandengine_components from '@wonderlandengine/components';
+_registerEditor(__wonderlandengine_components);
+import * as __Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_button_js from '/Users/s2173041/presentations/mr4jsdevs/wonderlandengine/js/button.js';
+_registerEditor(__Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_button_js);
+import * as __Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_rotate_js from '/Users/s2173041/presentations/mr4jsdevs/wonderlandengine/js/rotate.js';
+_registerEditor(__Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_rotate_js);
+import * as __Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_rubix_js from '/Users/s2173041/presentations/mr4jsdevs/wonderlandengine/js/rubix.js';
+_registerEditor(__Users_s2173041_presentations_mr4jsdevs_wonderlandengine_js_rubix_js);
