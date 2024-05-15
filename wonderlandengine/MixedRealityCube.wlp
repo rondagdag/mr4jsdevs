@@ -1605,7 +1605,7 @@
                 {
                     "type": "text",
                     "text": {
-                        "text": "Thanks!"
+                        "text": "Spin"
                     }
                 }
             ],
@@ -1633,7 +1633,7 @@
                 {
                     "type": "text",
                     "text": {
-                        "text": "Welcome to\nWonderland",
+                        "text": "Calls local GPT to \nwrite randomize js code",
                         "material": "201"
                     }
                 }

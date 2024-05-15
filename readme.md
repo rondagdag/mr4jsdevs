@@ -10,15 +10,28 @@ In this example you find a local website that can be used to learn to create sim
 [Website](https://rondagdag.github.io/mr4jsdevs/)
 
 ## Local Development
+
+Using Codespaces:
+- Navigate to the [github/rondagdag/mr4jsdev](https://github.com/rondagdag/mr4jsdevs)  repository.
+- Click the  Code button, then click the Codespaces tab.
+- Create your codespace, using the default options
+
 ```bash
 npm install local-web-server
 npx ws
 ```
 
-Install ngrok. https://ngrok.com/docs/getting-started
+
+For the Wonderland Engine Project:
+- To run local language model download and install [Ollama](https://ollama.com/download)
 ```bash
-ngrok http 8000
+ollama pull phi3
+ollama serve
 ```
+- clone this repository locally.
+- download [Wonderland Engine](https://wonderlandengine.com/downloads/)
+- open wonderlandengine/MixedRealityCube.wlp
+- the api calls ollama serving phi3, it uses http://localhost:11434/api/generate
 
 ## Slides
 [Presentation](mr4jsdevs.pdf)
